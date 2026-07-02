@@ -1,0 +1,162 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* メッセージ表示欄 */
+#message {
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef5350;
+}
+
+#message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #66bb6a;
+}
+
+/* タスク入力エリア */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#addBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #45a049;
+}
+
+/* タスクセクション */
+.task-section {
+    margin-bottom: 20px;
+}
+
+#incompleteTasks,
+#completedTasks {
+    min-height: 50px;
+}
+
+/* タスクアイテム */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.task-item:hover {
+    background-color: #f0f0f0;
+}
+
+.task-title {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 完了済みタスクの見た目 */
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ボタン */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.toggle-btn,
+.delete-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.toggle-btn:hover {
+    background-color: #1976D2;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* 空状態のメッセージ */
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-size: 14px;
+}
