@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoリストWebアプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Todoリスト</h1>
+        
+        <!-- メッセージ表示欄 -->
+        <div id="message"></div>
+        
+        <!-- タスク追加フォーム -->
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="タスク名を入力してください">
+            <button id="addBtn">追加</button>
+        </div>
+        
+        <!-- 未完了タスク一覧 -->
+        <div class="task-section">
+            <h2>未完了タスク</h2>
+            <div id="incompleteTasks"></div>
+        </div>
+        
+        <!-- 完了済みタスク一覧 -->
+        <div class="task-section">
+            <h2>完了済みタスク</h2>
+            <div id="completedTasks"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
